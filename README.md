@@ -1,2 +1,2 @@
 # ProjetoTeixeiraWeb
-O meu tema é: cinema. 
+O meu tema é: loja ou ciema. 
