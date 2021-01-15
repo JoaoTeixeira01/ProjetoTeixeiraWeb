@@ -1,0 +1,11 @@
+Conta Admin:
+Nome de Utilizador:admin
+Password:admin
+
+Conta FUncionário:
+Nome de utilizador: luis
+password: password
+
+Conta Utente:
+Nome de utilizador: joao
+Password: password
