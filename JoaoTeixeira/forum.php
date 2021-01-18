@@ -33,9 +33,7 @@
 
     //Novo post
     echo '<div class="novo_post"><a href="novo_post.php"><button class="button"><b>Novo Post</b></button></a></div>';
-    if($_SESSION['ID_Tipo_Utilizador'] != 1){
-    echo '<div class="novo_post"><a href="form_email.php"><button class="button"><b>Enviar Email</b></button></a></div>';
-    }
+
     echo '<div class="novo_post"><a href="lista_post_inativos.php?pid='.$_SESSION['ID_Utilizador'].'"><button class="button"><b>Dúvidas Inativas</b></button></a></div>';
 
     //apresentar dados da base de dados 
