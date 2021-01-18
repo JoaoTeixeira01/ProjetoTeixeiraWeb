@@ -1,5 +1,4 @@
 <?php
-    include 'logado_admin.php';
     //FORUM
     session_start();
     if(!isset($_SESSION['user']))   
@@ -7,8 +6,21 @@
         include 'cabecalho.php';
 	echo '<div class="erro "><center><img src="permissoes.png" width="400" alt="S.A.D"><br><br>
 	<center><a href="index.php"> <input class ="button"type="button" value="Retroceder "></a><br><br>
-	</div></center>';
-	exit;   
+	</div>';
+	exit;
+    }
+
+    if ($_SESSION['ID_Tipo_Utilizador'] == 1)
+    {
+        include 'logado_admin.php';
+    }
+   else if ($_SESSION['ID_Tipo_Utilizador'] == 3)
+   {
+    include 'logado.php';
+   }
+   else
+   {
+    include 'logado_funcionario.php';
     }
 
     error_reporting(0);
