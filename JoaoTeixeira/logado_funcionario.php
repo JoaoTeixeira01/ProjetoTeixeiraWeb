@@ -12,7 +12,6 @@
     <li><a href="painelcontrolo.php">Painel de controlo</a></li>
   <li><a href="forum.php">Fórum</a></li>
   <li><a href="agenda.php">Agenda</a></li>
-  <li><a href="form_email.php">Envie um email</a></li>
   <li><a href="logout.php">Sair</a></li>
 	</ul>
   </div>
