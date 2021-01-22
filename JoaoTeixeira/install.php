@@ -178,12 +178,12 @@
     $motor = $ligacao->prepare($utilizador3_INSERT);
 	$motor->execute();
 
-	$posts_INSERT="INSERT INTO posts (ID_Post, titulo, mensagem, estados , data_post, ID_Utilizador) VALUES (1, 'Teste1','Mensagem de teste1', 'ativo','2019-02-09  10:28:00', 1)"; 
+	$posts_INSERT="INSERT INTO posts (ID_Post, titulo, mensagem, estados , data_post, ID_Utilizador) VALUES (1, 'Teste1','Mensagem de teste1', 'ativo','2021-01-19  10:28:00', 1)"; 
 
 	$motor=$ligacao->prepare($posts_INSERT);
 	$motor->execute();
 
-	$resposta_posts_INSERT="INSERT INTO resposta_posts (ID_Resposta, mensagem, estado_resposta , data_resposta, ID_Utilizador, ID_Post ) VALUES (1, 'Clicar na aba de pesquisa','ativo','2019-02-09', 1, 1)"; 
+	$resposta_posts_INSERT="INSERT INTO resposta_posts (ID_Resposta, mensagem, estado_resposta , data_resposta, ID_Utilizador, ID_Post ) VALUES (1, 'Clicar na aba de pesquisa','ativo','2021-01-19', 1, 1)"; 
 
 	$motor=$ligacao->prepare($resposta_posts_INSERT);
 	$motor->execute();
@@ -223,22 +223,22 @@
 	$motor=$ligacao->prepare($material3_INSERT);
 	$motor->execute();
 
-	$servico_INSERT="INSERT INTO servico VALUES (1, '2019-07-01', '09:09 ', '10:10', 'Ativo', 'No serviço foram realizadas todas as atividades propostas', 2, 3, 1, 1)"; 
+	$servico_INSERT="INSERT INTO servico VALUES (1, '2021-01-18', '09:09 ', '10:10', 'Ativo', 'No serviço foram realizadas todas as atividades propostas', 2, 3, 1, 1)"; 
 
 	$motor=$ligacao->prepare($servico_INSERT);
 	$motor->execute();
 
-	$servico_INSERT="INSERT INTO servico VALUES (2, '2019-06-13', '10:11 ', '11:10', 'Ativo', 'No serviço as atividades propostas foram parcialmente realizadas ', 2, 3, 1, 1)"; 
+	$servico_INSERT="INSERT INTO servico VALUES (2, '2021-01-16', '10:11 ', '11:10', 'Ativo', 'No serviço as atividades propostas foram parcialmente realizadas ', 2, 3, 1, 1)"; 
 
 	$motor=$ligacao->prepare($servico_INSERT);
 	$motor->execute();
 
-	$servico_INSERT="INSERT INTO servico VALUES (3, '2019-07-10', '12:11 ', '12:10', 'Ativo', 'No serviço foram realizadas todas as atividades propostas', 2, 3, 1, 1)"; 
+	$servico_INSERT="INSERT INTO servico VALUES (3, '2021-01-17', '12:11 ', '12:10', 'Ativo', 'No serviço foram realizadas todas as atividades propostas', 2, 3, 1, 1)"; 
 
 	$motor=$ligacao->prepare($servico_INSERT);
 	$motor->execute();
 
-	$servico_INSERT="INSERT INTO servico VALUES (4, '2019-07-19', '14:09 ', '17:10', 'Ativo', 'No serviço foram realizadas todas as atividades propostas', 2, 3, 1, 1)"; 
+	$servico_INSERT="INSERT INTO servico VALUES (4, '22021-01-22', '14:09 ', '17:10', 'Ativo', 'No serviço foram realizadas todas as atividades propostas', 2, 3, 1, 1)"; 
 
 	$motor=$ligacao->prepare($servico_INSERT);
 	$motor->execute();
