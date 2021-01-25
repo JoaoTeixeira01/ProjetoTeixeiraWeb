@@ -423,11 +423,6 @@ function RegistarUtilizador()
 		</div>
 		';
 		
-	require 'enviar_email.php';
-    $mail->Subject='Registo no site SAD';
-    $mail->Body=' Bem vindo(a) '.$nome.' '.$apelido.', a sua conta no site SAD foi criada com sucesso.<br>Apartir deste momento já pode usufruir do nosso site em <a href="http://www.sadoficial.ga/">Site SAD</a><br>Com os melhores cumprimentos,<br>Equipa SAD';
-    $mail->addAddress($email);
-    $mail->send();
 	
 }
 ?>
