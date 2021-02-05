@@ -1,0 +1,80 @@
+create database teixeira_projeto;
+
+create table utilizador(
+    idUtilizador int not null auto_increment primary key,
+    username varchar(20) not null,
+    email varchar(25) not null,
+    password varchar(50) not null
+);
+
+create table marca(
+    idMarca int not null auto_increment primary key,
+    nome varchar(15),
+    foto varchar(10)
+);
+
+create table categoria(
+    idCategoria int not null auto_increment primary key,
+    nome varchar(15)
+);
+
+create table computador(
+    idComputador int not null auto_increment primary key,
+    idMarca int not null,
+    idCategoria int not null,
+    nome varchar(50),
+    cpu varchar(100),
+    cpuCooler varchar(100),
+    caixa varchar(100),
+    motherboard varchar(100),
+    gpu varchar(100),
+    ram varchar(100),
+    armazenamento varchar(100),
+    fonte varchar(100),
+    foto varchar(100),
+    foreign key (idMarca) references marca(idMarca),
+    foreign key (idCategoria) references categoria(idCategoria)
+);
+
+create table componente(
+    idComponente int not null auto_increment primary key,
+    nome varchar(50),
+    foto varchar(100)
+);
+
+-- inserção dos dados do marca
+insert into marca (nome, foto) values ('ASUS', '1.png');
+insert into marca (nome, foto) values ('Acer', '2.png');
+insert into marca (nome, foto) values ('Dell', '3.png');
+insert into marca (nome, foto) values ('Gigabyte', '4.png');
+insert into marca (nome, foto) values ('HP', '5.png');
+insert into marca (nome, foto) values ('Lenovo', '6.png');
+insert into marca (nome, foto) values ('Microsoft', '7.png');
+insert into marca (nome, foto) values ('MSI', '8.png');
+insert into marca (nome, foto) values ('Desktop', '9.png');
+
+-- inserção dos dados do categoria
+insert into categoria (nome) values ('Computadores');
+insert into categoria (nome) values ('Componentes');
+
+-- inserção dos dados do componente
+insert into componente (foto, nome) values ('caixa.png','E-ATX Kolink Observatory Preto RGB Vidro Temperado');
+insert into componente (foto, nome) values ('cooler.png','Water Cooler Cooler Master Master Liquid ML360R, RGB 360mm, Intel-AMD, MLX-D36M-A20PC-R1');
+insert into componente (foto, nome) values ('fonte.png','Fonte de Alimentacao Gigabyte PB650B 650W ATX 80 Plus Bronze');
+insert into componente (foto, nome) values ('gpu.png','Grafica Asus GeForce RTX 3090 ROG Strix OC 24GD6X');
+insert into componente (foto, nome) values ('motherboard.png','Motherboard Asus ROG Maximus XII Extreme Z490');
+insert into componente (foto, nome) values ('processador.png','Processador Intel Core i9 10900KA 10-Core (3.7GHz-5.3GHz) 20MB Skt1200 Avengers Edition');
+insert into componente (foto, nome) values ('ram.png','Crucial Kit 64GB (2 x 32GB) DDR4 3600MHz Ballistix Black RGB CL16');
+insert into componente (foto, nome) values ('som.png','Placa de Som Asus Xonar Strix Raid Pro');
+
+-- inserção dos dados do computador
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (9,1,'Computador King Mod Gamer R5 16GB 512GB GTX 1650 SUPER','AMD Ryzen 5 2600 (3.4GHz-3.9GHz) Socket AM4','Cooler a Ar para Processador','Caixa ATX com Vidro Temperado','Asus B450','Asus GeForce GTX 1650 SUPER','MEMORIA RAM: Kit 16GB (2 x 8GB) DDR4 3200MHz','Disco SSD 512GB M.2 NVMe','Fonte Modular de 600W 80+ Bronze', '1.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (9,1,'Computador King Mod Gamer VSKI Beast R7 16GB 16GB 512GB RTX 2060 SUPER','AMD Ryzen 7 3700X (3.6GHz-4.4GHz) Socket AM4','Cooler a agua AiO da Asus para Processado','Caixa ATX com Vidro Temperado','Motherboard B450','Nvidia GeForce RTX 2060 SUPER 8GB GD6','Kit 16GB (2 x 8GB) DDR4 3200MHz','Disco SSD 512GB M.2 NVMe','Fonte Modular de 700W 80+ Bronze', '2.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (1,1,'Asus TUF A15 15.6" FA506II R9 16GB 512GB GTX 1660 TI 144Hz RGB','AMD Ryzen 9 4900H 3.0 GHz (8M Cache, ate 4.4 GHz)',' ',' ',' ','NVIDIA GeForce GTX 1660Ti com 6GB GDDR6','16GB (2 x 8GB DDR4-3200MHz)','SSD 512GB M.2 NVMe PCIe 3.0',' ', '3.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (2,1,'Acer Aspire 3 15.6" A315-55G-51KL','Intel Core i5-10210U Quad-Core, 1.60 GHz com Turbo ate 4.20 GHz, 6 MB Cache',' ',' ',' ','Intel UHD Graphics + NVIDIA GeForce MX230 2GB GDDR5','8GB (1x8GB) DDR4','SSD 512GB PCIe NVMe',' ', '4.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (3,1,'Dell XPS 15 9500 15.6" i7 32GB 1TB GTX 1650 TI UHD W10 Pro','Intel Core i7-10750H 2.60Ghz (12MB Cache, com Turbo ate 5.00GHz)',' ',' ',' ','NVIDIA GeForce GTX 1650 Ti com 4GB GDDR6','32GB DDR4 2933Mhz (2 x 8GB)','SSD 1TB M.2 PCIe NVMe',' ', '5.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (4,1,'Gigabyte Aorus 15P KB-7PT1130SD','Intel Core i7-10750H Hexa-Core, 2.60 GHz com Turbo ate 5.00 GHz, 12 MB Cache',' ',' ',' ','Intel UHD Graphics + NVIDIA GeForce RTX 2060 6GB GDDR6','16GB (2x8GB) DDR4 2666MHz','SSD 512GB PCIe Gen3x4',' ', '6.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (5,1,'OMEN 15.6" 15-ek0003np i7 16GB 1TB RTX 2070 144Hz','i7-10750H (2,6 GHz de frequencia base, ate 5.0 GHz com Tecnologia Intel Turbo Boost, 12 MB L3 de cache, 6 nucleos)',' ',' ',' ','NVIDIA GeForce RTX 2070 Super com design Max-Q, 8GB de memoria GDDR6','SDRAM DDR4-2933 de 16GB (2 x 8GB) ','SSD 1 TB PCIe NVMe M.2',' ', '7.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (6,1,'Lenovo LEGION 7i 15.6" 15IMH-268 i9 32GB 2TB RTX 2080 SUPER 144Hz W10','Intel Core i9-10980HK, 8 Cores, 16 Threads, 2.4 GHz com Turbo ate 5.3 GHz, 16MB Cache',' ',' ',' ','NVIDIA GeForce RTX 2080 Super Max-Q, com 8GB de memoria VRAM GDDR6','32GB DDR4 3200MHz','2 x SSD de 1TB M.2 2280 PCIe NVMe',' ', '8.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (7,1,'MICROSOFT Surface Pro 7 - VDV-00004  (12.3" - Intel Core i5-1035G4 - RAM: 8 GB - 128 GB SSD - Intel Iris Plus)','Intel Core i5-1035G4 Quad-Core, 1.1 GHz (Turbo: 3.7 GHz)',' ',' ',' ','Intel Iris Plus','MEMORIA RAM: 8GB (1x8GB) DDR4','SSD 128GB PCIe NVMe',' ', '9.png');
+insert into computador (idMarca, idCategoria, nome, cpu, cpuCooler, caixa, motherboard, gpu, ram, armazenamento, fonte, foto) values (8,1,'MSI 15.6" GE66 Raider 10SF-281PT i7 32GB 1TB RTX 2070 240Hz W10','Intel Core i7-10875H Octa-core, 2.30 GHz com Turbo ate 4.10 GHz, 16 MB Cache',' ',' ',' ','NVIDIA GeForce RTX 2070, com 8GB de memoria VRAM GDDR6','MEMORIA RAM: 32GB DDR4 3200MHz (2 x 16GB)','SSD 1TB NVMe PCIe Gen3x4',' ', '10.png');

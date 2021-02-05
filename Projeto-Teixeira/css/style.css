@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+}
+
+/* -------------------- HEADER -------------------- */
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+}
+
+header li {
+  float: left;
+}
+
+header li a,
+header div.active {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+header li a:hover:not(.active) {
+  background-color: #ff3333;
+}
+
+header .active {
+  background-color: #ff3333;
+}
+
+/* ---------------------------------------- */
+
+/* -------------------- ITEM CONTAINER -------------------- */
+.centerItems {
+  height: 90%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerItems {
+  display: flex;
+  flex-direction: column;
+  background: #616161;
+  justify-content: flex-start;
+  border-radius: 5px;
+  padding: 30px;
+  color: #000;
+  width: 80%;
+  height: 80%;
+}
+
+.itemrow {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 5px 0;
+}
+
+.item {
+  background: #fff;
+  width: 20%;
+  height: 100%;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item:hover {
+  background: #cfcfcf;
+}
+
+.itemImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  width: 80%;
+  height: 80%;
+}
+
+.itemImg img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.itemNome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  width: 80%;
+  height: 20%;
+}
+
+/* ---------------------------------------- */
+
+/* -------------------- PRODUTO -------------------- */
+.produto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.imgProduto {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgProduto img {
+  max-width: 80%;
+  max-height: 100%;
+}
+
+.textProduto {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textProduto p {
+  font-size: 17;
+}
+
+#produtoNome {
+  font-weight: bold;
+  font-size: 20;
+}
+
+/* ---------------------------------------- */
+
+/* -------------------- COMPONENTE -------------------- */
+.itemComponente {
+  background: #fff;
+  width: 20%;
+  height: 100%;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------------------------------------- */
+
+/* -------------------- LOGIN -------------------- */
+.centerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.itemLogin {
+  background: #fff;
+  width: 20%;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.containerLogin input[type="text"],
+.containerLogin input[type="password"],
+.containerLogin input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.containerLogin button {
+  background-color: #ff3333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.error {
+  color: #fff;
+  background: red;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.success {
+  color: #fff;
+  background: green;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.textRedirect {
+  text-decoration: none;
+  color: black;
+}
+
+.textRedirect:hover {
+  color: #ff3333;
+}
+
+/* ---------------------------------------- */
+
+/* -------------------- LOGOUT -------------------- */
+.logout {
+  display: flex;
+  flex-direction: row;
+}
+
+/* ---------------------------------------- */
+
+/* -------------------- INDEX -------------------- */
+header img {
+  max-width: 40px;
+}
+
+.containerItems .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerItems img {
+  width: 95%;
+}
